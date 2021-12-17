@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KotlinHM2</string>
+    <string name="btn_add">add</string>
+    <string name="shuffle">shuffle</string>
+</resources>
