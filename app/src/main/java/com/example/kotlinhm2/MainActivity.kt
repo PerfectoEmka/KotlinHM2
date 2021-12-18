@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.example.kotlinhm2.databinding.ActivityMainBinding
+import com.example.kotlinhm2.extensions.load
+import com.example.kotlinhm2.extensions.showToast
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
@@ -31,8 +33,7 @@ class MainActivity : AppCompatActivity() {
     private fun shuffleImages() {
         val randomIndex = Random.nextInt(list.size)
         val randomElement = list.get(randomIndex)
-        Glide.with(this)
-            .load(randomElement).into(binding.ivPicture)
+        binding.ivPicture.load(randomElement)
     }
 
     private fun setImageUrl() {
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             list.add(url)
             binding.etEdit.setText("")
         } else {
-            Toast.makeText(this, "Please set image link!", Toast.LENGTH_SHORT).show()
+            showToast(getString(R.string.set_message))
         }
     }
 

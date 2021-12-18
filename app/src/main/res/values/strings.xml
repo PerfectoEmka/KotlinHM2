@@ -2,4 +2,5 @@
     <string name="app_name">KotlinHM2</string>
     <string name="btn_add">add</string>
     <string name="shuffle">shuffle</string>
+    <string name="set_message">Please set image link</string>
 </resources>
